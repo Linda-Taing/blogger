@@ -1,7 +1,17 @@
 <template>
-  <div class="component">
-
-
+ <div v-if="profile" class="container">
+    <div class="row">
+      <div class="col-12">
+          <img :src="profile.picture" alt="">
+       </div>
+       <div class="col-12">
+         <div> {{ profile.bio }}</div>
+         <div>{{ profile.class }}</div>
+         <div>
+          <img :src="profile.coverImg" alt="">
+         </div>
+       </div>
+     </div>
   </div>
 </template>
 
