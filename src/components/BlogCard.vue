@@ -3,11 +3,11 @@
     <img class="blogImg" :src="blog.imgUrl" :alt="blog.title">
     <div class="pb-2" >{{ blog.title }}</div>
     <div class="pb-2">{{ blog.body }}</div>
-    <div class="pb-2">{{ blog.tags }}</div>
+    <!-- <div class="pb-2">{{ blog.tags }}</div> -->
     <div class="pb-2">{{ blog.published }}</div>
 
     <router-link :to= "{name: 'Profile', params: {creatorId: blog.creatorId}}">
-<img src="" alt="">
+<img class="rounded-circle" height="70" width="70" :src="blog.creator.picture" :alt="blog.creator.name">
     </router-link>
     
 
@@ -43,5 +43,6 @@ export default {
   object-fit: cover;
 
 }
+
 
 </style>
