@@ -1,13 +1,15 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-    <div v-for="b in blogs" class="col-md-10">
+  <div v-if="blogs.length" class="container-fluid">
+    <div class="row justify-content-center">
+    <div v-for="b in blogs" class="col-md-10 ">
       <BlogCard :blog = "b"/>
       </div>
     </div>
   </div>
+<div v-else class="container-fluid">
+
+</div>
  
- <h1> </h1>
 </template>
 
 <script>
